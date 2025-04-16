@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lap-line-tracker</title>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/laplinetracker/lap-line-tracker.js" defer></script>
+    <link rel="stylesheet" href="/laplinetracker/lap-line-tracker.css">
+  </head>
+
+  <body>
+  <div class="lap-container">
+    <header class="status-panel">
+      <div class="race-status">
+        <span id="status-text" class="status-text">🏎️ Lap-line Tracker - Waiting for Race</span>
+      </div>
+    </header>
+    
+    <div id="car-buttons" class="car-buttons-container"></div>
+  </div>
+  
+  <div id="session-ended" class="session-ended">
+    <div class="session-ended-message">
+      RACE SESSION ENDED
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #1976d2;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --danger-color: #e53935;
+    --font-size-base: 2.2vw;
+    --font-size-header: 2.1vw;
+    --race-info-height: 15vh;
+    --padding: 1.3vw;
+    --row-height: 8vh;
+}
+
+body {
+    font-family: 'Arial Black', sans-serif;
+    margin: 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-size: var(--font-size-base);
+    overflow: hidden;
+    position: relative;
+}
+
+.next-race {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: var(--padding);
+    border-bottom: 0.15vw solid #333;
+    font-size: var(--font-size-base);
+    text-align: center;
+    box-sizing: border-box;
+    height: var(--row-height);
+}
+
+th {
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: var(--font-size-header);
+    padding: 0.8vw;
+}
+
+.race-info {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--race-info-height);
+    background: rgba(34, 34, 34, 0.95);
+    z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.timer {
+    font-size: 5.5vw;
+    color: #fff;
+    margin: 0;
+    line-height: 0.9;
+}
+
+.message {
+    font-size: 4.5vw;
+}
+
+.fullscreen-btn {
+    position: absolute;
+    bottom: 0.5vh;
+    right: 0.5vw;
+    background-color: rgba(51, 51, 51, 0.7);
+    color: white;
+    border: none;
+    padding: 0.6vw 0.7vw;
+    border-radius: 0.1vw;
+    cursor: pointer;
+    font-size: 1.5vw;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.fullscreen-btn:hover {
+    background-color: rgba(51, 51, 51, 0.9);
+}

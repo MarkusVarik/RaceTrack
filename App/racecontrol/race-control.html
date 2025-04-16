@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/racecontrol/race-control.css" />
+    <title>Race Control</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/racecontrol/race-control.js" defer></script>
+  </head>
+  <body>
+    <h1>Race Control - Safety Official</h1>
+    <div class="control-panel">
+      <div class="start-end-buttons">
+        <button id="safe-to-start" class="disabled">✅ Safe to Start ✅</button>
+        <button id="start-race" class="hidden">🏎️ Start Race 🏎️</button>
+        <button id="end-session">🏴󠁮󠁧󠁧󠁯󠁿 End Session 🏴󠁮󠁧󠁧󠁯󠁿</button>
+      </div>
+
+      <div class="timer">00:00</div>
+
+      <h3>Safety Controls</h3>
+      <div class="safety-buttons hidden">
+        <button id="safe">Safe 🛡️</button>
+        <button id="hazard">Hazard ❗</button>
+        <button id="danger">Danger 💣</button>
+        <button id="finish">Finish 🏁</button>
+      </div>
+
+      <div id="race-session">
+        <h3>Race Session</h3>
+        <p><strong>Session ID:</strong> <span id="session-id">N/A</span></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Car #</th>
+              <th>Driver</th>
+            </tr>
+          </thead>
+          <tbody id="racesession-body">
+            <tr>
+              <td colspan="5">No race sessions available.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

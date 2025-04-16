@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next Race</title>
+    <link rel="stylesheet" href="nextrace/nr-style.css" />
+    <script src="nextrace/next-race.js" defer></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div class="next-race">
+      <table>
+        <thead>
+          <tr>
+            <th>Car #</th>
+            <th>Driver</th>
+          </tr>
+        </thead>
+        <tbody id="driver-list">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="race-info">
+      <button class="fullscreen-btn" onclick="toggleFullScreen()">🖥️</button>
+      <p class="timer" id="race-timer">00:00</p>
+      <p class="message" id="system-message">Awaiting call to the paddoсk.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!-- front-desk.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/frontdesk/front-desk.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/frontdesk/front-desk.js" defer></script>
+  <title>Front Desk - Race Management</title>
+</head>
+
+<body>
+<h1>🏁 Race Sessions Panel - Front Desk</h1>
+
+<div class="race-list">
+  <table>
+    <thead>
+    <tr>
+      <th>🏁 Race #</th>
+      <th>👥 Registered Drivers</th>
+      <th>✏️Actions</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<div class="form-container">
+  <form class="add-race-form">
+    <h2>Add Race Session & Drivers</h2>
+
+    <div class="drivers-list">
+      <h3>Drivers</h3>
+      <table>
+        <thead>
+        <tr>
+          <th>🧑‍🏁Driver Name</th>
+          <th>🚗Car Number</th>
+          <th>✏️Actions</th>
+        </tr>
+        </thead>
+        <tbody id="drivers-table"></tbody>
+      </table>
+
+      <div class="drivers-form">
+        <h3>Driver Details</h3>
+        <label>Driver Name</label>
+        <input
+                type="text"
+                id="new-driver"
+                placeholder="Enter driver name"
+                name="driver-name"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="button-container">
+  <button type="button" class="add-driver-btn">+ Add Driver</button>
+  <button type="button" class="add-race-btn">+ Save Race</button>
+</div>
+
+<div class="navigation">
+  <a href="/next-race">Next Race</a>
+  <a href="/leader-board">Leader Board</a>
+</div>
+</body>
+</html>

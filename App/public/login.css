@@ -1,0 +1,73 @@
+/* Reusable color and size variables */
+:root {
+  --primary-color: #1976d2; /* Default color */
+  --success-color: #4caf50; /* Green for success/edit actions */
+  --danger-color: #e53935; /* Red for delete/stop actions */
+  --border: 1px solid #ccc; /* Border */
+  --border-radius: 5px; /* Rounded corners for elements */
+  --border-color: #eee; /* Light gray for borders */
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  --padding-sm: 8px; /* Small padding */
+  --padding-md: 12px; /* Medium padding */
+  --padding-lg: 20px; /* Large padding */
+  --padding-xl: 30px; /* Extra-large padding */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-container {
+  background: white;
+  padding: var(--padding-lg);
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  text-align: center;
+  width: 300px;
+  max-width: 100%;
+}
+
+h2 {
+  margin-bottom: var(--padding-md);
+  color: var(--primary-color);
+}
+
+form input {
+  width: calc(100% - 20px);
+  padding: var(--padding-sm);
+  margin: 10px 0;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: var(--padding-md);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* Error Message */
+.error-message {
+  color: var(--danger-color);
+  font-size: 14px;
+  margin-top: var(--padding-sm);
+}
+
+/* Centered container for login */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}

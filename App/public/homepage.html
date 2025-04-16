@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>🏁 Racetrack Homepage</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    a.button {
+      display: inline-block;
+      background: #238636;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease-in-out;
+    }
+
+    a.button:hover {
+      background: #2ea043;
+      transform: scale(1.05);
+    }
+
+    /* mobile-friendly */
+    @media (max-width: 600px) {
+      .button-container {
+        flex-direction: column;
+      }
+
+      a.button {
+        width: 80%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🏁 Racetrack Homepage</h1>
+  <div class="button-container">
+    <a class="button" href="/front-desk" target="_blank">🖥️ Front Desk</a>
+    <a class="button" href="/race-control" target="_blank">🕹️ Race Control</a>
+    <a class="button" href="/lap-line-tracker" target="_blank">🏎️ Lap Line Tracker</a>
+    <a class="button" href="/leader-board" target="_blank">🏆 Leaderboard</a>
+    <a class="button" href="/next-race" target="_blank">⏭️ Next Race</a>
+    <a class="button" href="/race-flags" target="_blank">🚩 Race Flags</a>
+    <a class="button" href="/race-countdown" target="_blank">⌛ Race Countdown</a>
+    
+  </div>
+</body>
+</html>

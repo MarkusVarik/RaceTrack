@@ -1,0 +1,139 @@
+/* Reusable color and size variables */
+:root {
+  --primary-color: #1976d2; /* Default color */
+  --success-color: #4caf50; /* Green for success/edit actions */
+  --danger-color: #e53935; /* Red for delete/stop actions */
+  --border: 1px solid #ccc; /* Border */
+  --border-radius: 5px; /* Rounded corners for elements */
+  --border-color: #eee; /* Light gray for borders */
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  --padding-sm: 8px; /* Small padding */
+  --padding-md: 12px; /* Medium padding */
+  --padding-lg: 20px; /* Large padding */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: var(--padding-lg);
+  background: #f4f4f9;
+}
+
+h1 {
+  text-align: center;
+}
+
+.race-list,
+.form-container {
+  max-width: 800px;
+  margin: var(--padding-lg) auto;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background: white;
+  box-shadow: var(--shadow);
+  padding: var(--padding-lg);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: var(--padding-md);
+  background: var(--primary-color);
+  color: white;
+}
+
+td {
+  padding: 15px var(--padding-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Button styles */
+button {
+  border: none;
+  border-radius: var(--border-radius);
+  color: white;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: var(--success-color);
+}
+
+.delete-btn {
+  background: var(--danger-color);
+}
+
+.add-btn,
+.add-driver-btn {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: var(--padding-md);
+  background: var(--primary-color);
+  text-align: center;
+}
+
+.add-race-btn {
+  display: block;
+  width: 200px;
+  margin: 10px auto;
+  padding: var(--padding-md);
+  background: var(--success-color);
+  text-align: center;
+}
+
+/* Forms */
+form input {
+  width: calc(100% - 20px);
+  padding: var(--padding-sm);
+  margin: 10px 0;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.session-id {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  text-align: left;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  display: inline-block;
+  width: 20%;
+}
+
+/* Driver list section */
+.race-list button,.drivers-list button {
+  padding: var(--padding-sm) var(--padding-md);
+}
+
+.driver-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding-sm) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Navigation links */
+.navigation {
+  text-align: center;
+  margin: var(--padding-lg) auto;
+}
+
+.navigation a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}

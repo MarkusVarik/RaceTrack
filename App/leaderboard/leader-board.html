@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leader Board</title>
+    <script src="leaderboard/leader-board.js" defer></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="leaderboard/lb-style.css">
+</head>
+<body>
+    <div class="leader-board">
+        <table>
+            <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Car #</th>
+                    <th>Driver</th>
+                    <th>Best Lap</th>
+                    <th>Cur. Lap</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboard-body">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="race-info">
+          <button class="fullscreen-btn" onclick="toggleFullScreen()">🖥️</button>
+        <p class="timer" id="race-timer">00:00</p>
+        <p class="message" id="system-message">🛑 Danger</p>
+    </div>
+
+    <script>
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>

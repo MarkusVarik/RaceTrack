@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/racecountdown/race-countdown.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/racecountdown/race-countdown.js" defer></script>
+    <title>Race Countdown</title>
+  </head>
+
+  <body>
+    <h1>Race Countdown</h1>
+
+    <div class="bigtimer">00:00</div>
+
+    <button
+      id="fullscreenBtn"
+      class="fullscreen-btn"
+      onclick="toggleFullScreen()"
+    >
+      🖥️
+    </button>
+    <script>
+      function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen();
+        } else if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    </script>
+  </body>
+</html>
